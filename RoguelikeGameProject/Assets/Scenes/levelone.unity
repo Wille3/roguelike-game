@@ -264,7 +264,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 143181093}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 100
   m_LinearDrag: 0
@@ -387,7 +387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 16, z: 1}
   m_Children: []
   m_Father: {fileID: 2133780905}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &590564812
 BoxCollider2D:
@@ -528,7 +528,7 @@ Transform:
   m_LocalScale: {x: 18, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2133780905}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &912941312
 BoxCollider2D:
@@ -741,7 +741,7 @@ Transform:
   m_LocalScale: {x: 18, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2133780905}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1135655725
 BoxCollider2D:
@@ -1210,7 +1210,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2133780905}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1964325938
 GameObject:
@@ -1242,7 +1242,7 @@ Transform:
   m_LocalScale: {x: 1, y: 16, z: 1}
   m_Children: []
   m_Father: {fileID: 2133780905}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1964325940
 BoxCollider2D:
@@ -1349,11 +1349,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 262804060}
+  - {fileID: 1879282958}
   - {fileID: 590564811}
   - {fileID: 1964325939}
   - {fileID: 1135655724}
   - {fileID: 912941311}
-  - {fileID: 1879282958}
   - {fileID: 1866548373}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1448,6 +1448,10 @@ PrefabInstance:
     - target: {fileID: 6928927942781888398, guid: 80d216d7a9522b441b9cb2e0938ea020, type: 3}
       propertyPath: moveSpeed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928927942781888400, guid: 80d216d7a9522b441b9cb2e0938ea020, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80d216d7a9522b441b9cb2e0938ea020, type: 3}
