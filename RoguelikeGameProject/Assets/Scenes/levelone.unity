@@ -266,15 +266,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &262804058
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,15 +963,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &1866548372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1452,10 @@ PrefabInstance:
     - target: {fileID: 6928927942781888400, guid: 80d216d7a9522b441b9cb2e0938ea020, type: 3}
       propertyPath: m_Mass
       value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928927942781888400, guid: 80d216d7a9522b441b9cb2e0938ea020, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80d216d7a9522b441b9cb2e0938ea020, type: 3}
