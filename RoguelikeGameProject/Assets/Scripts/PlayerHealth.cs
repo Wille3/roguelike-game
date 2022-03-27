@@ -27,12 +27,14 @@ public class PlayerHealth : MonoBehaviour
         } else if (health <= 0f)
         {
             health = 0f;
-            Debug.Log("Player Respawn");
+            healthSlider.value = health;
+            Destroy(gameObject);
         }
     }
 
     private void OnGUI()
     {
-        healthSlider.value = health;
+        float t = Time.deltaTime / 1f;
+        healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
     }
 }

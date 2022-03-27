@@ -73,12 +73,14 @@ public class PlayerAttack : MonoBehaviour
         if (FlameInHandCharge > MaxFlameInHandCharge) FlameInHandCharge = MaxFlameInHandCharge;
 
         float FlameInHandSpeed = FlameInHandCharge + FlameInHandPower;
+        float FireDamage = FlameInHandCharge * FlameInHandPower;
 
         float angle = Utility.AngleTowardsMouse(FlameInHand.position);
         Quaternion rot = Quaternion.Euler(new Vector3(0f, 0f, angle - 90f));
 
         FireShot FireShot = Instantiate(FireShotPrefab, FlameInHand.position, rot).GetComponent<FireShot>();
         FireShot.FireVelocity = FlameInHandSpeed;
+        FireShot.FireDamage = FireDamage;
 
         CanFire = false;
         FireShotGFX.enabled = false;

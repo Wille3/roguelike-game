@@ -6,6 +6,8 @@ public class FireShot : MonoBehaviour
 {
     [HideInInspector] public float FireVelocity;
 
+    [HideInInspector] public float FireDamage;
+
     [SerializeField] Rigidbody2D rb;
 
     private void Start()
@@ -19,6 +21,12 @@ public class FireShot : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Enemy Attacked");
+            Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            enemy.TakeDamage(FireDamage);
+        }
         Destroy(gameObject);
     }
 }
