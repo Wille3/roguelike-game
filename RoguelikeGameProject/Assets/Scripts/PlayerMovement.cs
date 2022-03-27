@@ -8,17 +8,25 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    [SerializeField] Transform hand;
+
     Vector2 movement;
 
-    // Update is called once per frame
     void Update()
     {
         MovementInput();
+        RotateHand();
     }
 
     private void FixedUpdate()
     {
         rb.velocity = movement * moveSpeed;
+    }
+
+    void RotateHand()
+    {
+        float angle = Utility.AngleTowardsMouse(hand.position);
+        hand.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
     }
 
     void MovementInput ()
